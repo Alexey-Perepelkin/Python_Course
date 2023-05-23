@@ -5,20 +5,19 @@
 # Т.е. билет с номером 385916 – счастливый, т.к. 3+8+5=9+1+6.
 # Вам требуется написать программу, которая проверяет счастливость билета.
 
-temp = input("Введите номер билета: ")
-number = int(temp)
-number1 = 0
-flag = True
-if len(temp) % 2 != 0:
-    flag = False
-if flag == True:
-    while number > 0:
-        tmp = number % 10
-        number = int(number/10)
-        number1 = number1 + tmp
-    if number1 % 2 == 0:
-        print(f"Билет с номером {temp} - счастливый")
+number = input("Введите номер билета: ")
+left=0
+right=0
+if len(number) % 2 == 0:
+    size=int(len(number)/2)
+    for i in number[:size]:
+        left += int(i)
+    for i in number[size:]:
+        right += int(i)
+    if left == right:
+        print(f"Билет с номером {number} - счастливый")
     else:
-        print(f"Билет с номером {temp} - не счастливый")
+        print(f"Билет с номером {number} - не счастливый")
 else:
     print(f"Билет с номером {number} не может быть счастливым по определению!")
+
