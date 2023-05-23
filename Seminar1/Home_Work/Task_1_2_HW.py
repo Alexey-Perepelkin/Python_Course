@@ -11,4 +11,7 @@ serg = int(s/3/2)
 piter = int(serg)
 katrin = int(2*(serg+piter))
 piter = serg
-print(f"{s}->{piter} {katrin} {serg}")
+if serg+piter+katrin != s:
+    print("Условие задачи не выполняется!")
+else:
+    print(f"{s} -> {piter} {katrin} {serg}")
