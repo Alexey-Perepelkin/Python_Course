@@ -34,7 +34,9 @@ for i in text:
     for item in dictionary_en:
         if i.upper()== item:
              sum+=dictionary_en[item]
+             break
     for item in dictionary_ru:
         if i.upper()== item:
-            sum+=dictionary_ru[item]        
+            sum+=dictionary_ru[item] 
+            break       
 print(sum)
