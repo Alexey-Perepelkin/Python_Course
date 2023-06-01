@@ -19,7 +19,7 @@ def Max_Summ(arr):
     print (arr)
     for i in range(len(arr)-1):
         List_1.append(arr[i-1] + arr[i] + arr[i+1])
-        List_1.append(arr[-2] + arr[-1] + arr[0])
+    List_1.append(arr[-2] + arr[-1] + arr[0])
     return max(List_1)
 
 print (Max_Summ(arr))
