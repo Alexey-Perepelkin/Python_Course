@@ -1,5 +1,5 @@
 def show_data(file_name):
-    print("\nПП\t|ФИО\t|ТЕЛ\t")
+    print("\nПП|ФИО|ТЕЛ")
     with open(file_name, "r",encoding="utf-8") as data:
         print(f"{data.read()}\n")
 
@@ -25,7 +25,7 @@ def edit_data(file_name):
         fio=elements[1]
     if len(tel)==0:
         tel=elements[2]
-    new_row=f"{num}\t|{fio}\t|{tel}\t"
+    new_row=f"{num}|{fio}|{tel}"
     
     print (new_row)
     tel_book_rows[index_del_data]=new_row
@@ -42,7 +42,7 @@ def add_data(file_name):
     fio=input("Введите фамилию: ")
     tel=input("Введите номер телефона: ")
     with open(file_name,"a",encoding="utf-8") as data:
-        data.write(f"{num}\t|{fio}\t|{tel}\t\n")
+        data.write(f"{num}|{fio}|{tel}\n")
     print(f"Добавлена запись-{num}|{fio}|{tel}\n")
 
     
@@ -93,7 +93,7 @@ def main():
             input("Для продолжения нажмите ENTER")
         else:
             flag=0
-            print("Досвидания!")
+            print("Выход")
 
 
 main()
