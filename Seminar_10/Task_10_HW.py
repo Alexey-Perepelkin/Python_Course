@@ -1,5 +1,3 @@
-
-
 import pandas as pd
      
 
@@ -23,6 +21,3 @@ print(data.head())
 data = data.drop(columns=['whoAmI'])
 print(data.head())
      
-
-
-
